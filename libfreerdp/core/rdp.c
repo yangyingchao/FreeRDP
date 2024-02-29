@@ -1413,6 +1413,7 @@ static int rdp_recv_tpkt_pdu(rdpRdp* rdp, wStream* s)
 					break;
 			}
 
+#if 0 /* TODO:  */
 			diff = Stream_GetRemainingLength(&sub);
 			if (diff > 0)
 			{
@@ -1421,6 +1422,8 @@ static int rdp_recv_tpkt_pdu(rdpRdp* rdp, wStream* s)
 				          " bytes remaining unhandled. Skipping.",
 				          pdu_type_to_str(pduType), diff);
 			}
+#endif /* End of #if 0 */
+
 		}
 	}
 	else if (rdp->mcs->messageChannelId && (channelId == rdp->mcs->messageChannelId))

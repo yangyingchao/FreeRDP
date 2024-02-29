@@ -191,11 +191,13 @@ static BOOL check_order_activated(wLog* log, rdpSettings* settings, const char* 
 	{
 		if (settings->AllowUnanouncedOrdersFromServer)
 		{
+#if 0 /* TODO:  */
 			WLog_Print(log, WLOG_WARN,
 			           "%s - SERVER BUG: The support for this feature was not announced!",
 			           orderName);
 			if (extendedMessage)
 				WLog_Print(log, WLOG_WARN, "%s", extendedMessage);
+#endif /* End of #if 0 */
 			return TRUE;
 		}
 		else

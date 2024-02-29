@@ -319,6 +319,9 @@ static BOOL update_read_play_sound(wStream* s, PLAY_SOUND_UPDATE* play_sound)
 
 BOOL update_recv_play_sound(rdpUpdate* update, wStream* s)
 {
+	return true;
+
+	// no bother plz...
 	PLAY_SOUND_UPDATE play_sound;
 
 	if (!update_read_play_sound(s, &play_sound))
